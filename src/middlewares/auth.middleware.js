@@ -2,7 +2,7 @@
 import jwt from "jsonwebtoken";
 import User from "../models/user.model.js";
 
-export const verifyJWT = async (req, res, next) => {
+export const authJWT = async (req, res, next) => {
   try {
     const token = req.headers?.authorization?.replace("Bearer ", "");
 

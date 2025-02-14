@@ -8,14 +8,14 @@ import {
   searchUsers,
   getAllUsers
 } from "../controllers/user.controller.js";
-import { verifyJWT } from "../middlewares/auth.middleware.js";
+import { authJWT } from "../middlewares/auth.middleware.js";
 
 const router = express.Router();
 
 // Public route
 router.post("/", registerUser);
 router.get("/", loginUser);
-router.get("/search", verifyJWT, searchUsers);
+router.get("/search", authJWT, searchUsers);
 router.get("/allUsers", getAllUsers);
 
 
