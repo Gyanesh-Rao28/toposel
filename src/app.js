@@ -15,8 +15,6 @@ app.use(express.json())
 import userRoute from "./routes/user.route.js";
 
 
-
-
 app.use('/api/v1/test', (req, res) => {
     res.send({
         testingAPI: "working"
@@ -25,7 +23,5 @@ app.use('/api/v1/test', (req, res) => {
 
 
 app.use("/api/v1/users", userRoute);
-
-
 
 export { app } 

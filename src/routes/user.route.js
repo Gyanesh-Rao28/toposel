@@ -6,6 +6,7 @@ import {
   registerUser,
   loginUser,
   searchUsers,
+  getAllUsers
 } from "../controllers/user.controller.js";
 import { verifyJWT } from "../middlewares/auth.middleware.js";
 
@@ -15,6 +16,7 @@ const router = express.Router();
 router.post("/", registerUser);
 router.get("/", loginUser);
 router.get("/search", verifyJWT, searchUsers);
+router.get("/allUsers", getAllUsers);
 
 
 export default router;

@@ -130,3 +130,21 @@ export const searchUsers = async (req, res) => {
   }
 };
 
+export const getAllUsers = async (req, res) => {
+  try {
+   
+
+    const users = await User.find({}).select("-password");
+
+    return res.status(200).json({
+      success: true,
+      data: users,
+      message: "Users fetched successfully",
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: error.message || "Internal server error",
+    });
+  }
+};
