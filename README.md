@@ -191,29 +191,3 @@ Retrieve a list of all users.
 }
 ```
 
-Common error codes:
-- 400: Bad Request
-- 401: Unauthorized
-- 404: Not Found
-- 409: Conflict
-- 500: Internal Server Error
-
-## Security
-
-- Passwords are hashed using bcrypt
-- Authentication using JWT tokens
-- Password field is excluded from all user queries
-- Environment variables for sensitive data
-- CORS enabled for specified origins
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
